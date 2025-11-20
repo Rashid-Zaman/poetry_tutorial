@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food Delivery Time Estimator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      color: #333;
+      padding: 40px;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    input[type="submit"] {
+      background-color: #28a745;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #218838;
+    }
+    a {
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+      text-align: center;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Estimate Delivery Time</h2>
+    <form action="/zamanrashid_predict" method="post">
+      <label>Distance (km):</label>
+      <input type="text" name="Distance_km" required>
+
+      <label>Weather:</label>
+      <select name="Weather" required>
+        <option value="" disabled selected>Select weather</option>
+        <option>Clear</option>
+        <option>Rainy</option>
+        <option>Foggy</option>
+        <option>Snowy</option>
+        <option>Windy</option>
+      </select>
+
+      <label>Traffic Level:</label>
+      <select name="Traffic_Level" required>
+        <option value="" disabled selected>Select traffic level</option>
+        <option>Low</option>
+        <option>Medium</option>
+        <option>High</option>
+      </select>
+
+      <label>Time of Day:</label>
+      <select name="Time_of_Day" required>
+        <option value="" disabled selected>Select time of day</option>
+        <option>Morning</option>
+        <option>Afternoon</option>
+        <option>Evening</option>
+        <option>Night</option>
+      </select>
+
+      <label>Vehicle Type:</label>
+      <select name="Vehicle_Type" required>
+        <option value="" disabled selected>Select vehicle type</option>
+        <option>Bike</option>
+        <option>Scooter</option>
+        <option>Car</option>
+      </select>
+
+      <label>Preparation Time (min):</label>
+      <input type="text" name="Preparation_Time_min" required>
+
+      <label>Courier Experience (yrs):</label>
+      <input type="text" name="Courier_Experience_yrs" required>
+
+      <input type="submit" value="Predict Delivery Time">
+    </form>
+    <a href="/zamanrashid_features">View Feature Info</a>
+  </div>
+</body>
+</html>

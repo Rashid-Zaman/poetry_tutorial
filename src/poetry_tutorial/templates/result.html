@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prediction Result</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      padding: 40px;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 25px;
+    }
+    p {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    a {
+      margin-top: 20px;
+      display: inline-block;
+      color: #007bff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Estimated Delivery Time</h2>
+    <p>{{ results }} minutes</p>
+    <a href="/">Make Another Prediction</a>
+  </div>
+</body>
+</html>
